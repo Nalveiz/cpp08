@@ -99,7 +99,6 @@ void testCopyConstructor()
     original.push(2);
     original.push(3);
 
-    // Test copy constructor
     MutantStack<int> copied(original);
 
     std::cout << "Original stack size: " << original.size() << std::endl;
@@ -108,7 +107,6 @@ void testCopyConstructor()
     std::cout << "Original top: " << original.top() << std::endl;
     std::cout << "Copied top: " << copied.top() << std::endl;
 
-    // Modify original
     original.push(4);
 
     std::cout << "After modifying original:" << std::endl;
@@ -131,7 +129,6 @@ void testAssignmentOperator()
     std::cout << "Stack1 size: " << stack1.size() << std::endl;
     std::cout << "Stack2 size: " << stack2.size() << std::endl;
 
-    // Assignment
     stack2 = stack1;
 
     std::cout << "After assignment:" << std::endl;
@@ -176,7 +173,6 @@ void testConversionToStdStack()
     mstack.push(21);
     mstack.push(84);
 
-    // Convert to std::stack
     std::stack<int> s(mstack);
 
     std::cout << "MutantStack size: " << mstack.size() << std::endl;
